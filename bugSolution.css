@@ -1,0 +1,17 @@
+The following code provides a solution to the CSS bug by improving specificity and ordering of styles:
+
+```css
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: purple; /* Maintain visited style */
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+```
+
+By ensuring that the `:hover` style has higher specificity or is placed after the `:visited` style (in this case, specificity is sufficient), we can guarantee that the hover state will take precedence and the visited style will only apply when the link has been visited and the mouse is not hovering.
