@@ -1,0 +1,17 @@
+The following CSS code snippet has a common error that can lead to unexpected behavior or styling issues.  The error is related to incorrect usage of the `:hover` pseudo-class along with other styles that are not correctly prioritized or specified.
+
+```css
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+a:visited {
+  color: purple;
+}
+```
+
+The problem arises when the `a:visited` style overrides or interacts unexpectedly with `a:hover`. The browser's order of style application might cause the hover state to not appear as expected, or the visited link color might be incorrectly shown while hovering.
